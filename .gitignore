@@ -1,0 +1,14 @@
+*.*
+!*.gitignore
+!*.cs
+!*.c
+!*.cpp
+!*.h
+!*.hpp
+!*.hlsl
+!*.ush
+!*.usf
+!*.manifest
+!*.config
+!*.sln
+!*.ini
