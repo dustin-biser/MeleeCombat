@@ -12,6 +12,7 @@
 !*.config
 !*.sln
 !*.ini
+!*.md
 !*.gitattributes
 !*.uproject
 !Content/**
