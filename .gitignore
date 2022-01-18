@@ -12,3 +12,4 @@
 !*.config
 !*.sln
 !*.ini
+!*.gitattributes
