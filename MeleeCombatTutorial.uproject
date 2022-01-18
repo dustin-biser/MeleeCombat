@@ -1,0 +1,22 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{6FDE3A81-4690-71B3-2DDF-01B60D07D798}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "MeleeCombatTutorial",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "EnhancedInput",
+			"Enabled": true
+		}
+	]
+}

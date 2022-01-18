@@ -13,3 +13,11 @@
 !*.sln
 !*.ini
 !*.gitattributes
+!*.uproject
+!Content/**
+!Source/**
+!Config/**
+
+Intermediate/**
+Saved/**
+Content/Builds/**
