@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeMeleeCombatTutorial_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x79B49B73,
+				0x82373925,
 				0x2E99A79E,
 				METADATA_PARAMS(nullptr, 0)
 			};

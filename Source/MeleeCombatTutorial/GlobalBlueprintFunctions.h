@@ -16,4 +16,7 @@ class MELEECOMBATTUTORIAL_API UGlobalBlueprintFunctions : public UBlueprintFunct
 	
 	UFUNCTION(BlueprintCallable, Category = "Miscellaneous")
 	static void SetCameraIsMovableWhenPaused(const UObject* WorldContextObject, bool bIsMovable);
+
+	UFUNCTION(BlueprintPure, Category = "Utilities|Array", Meta = (DisplayName = "Sort (Integer Array) (Copy)"))
+	static TArray<int32> SortIntegerArray(const TArray<int32>& IntegerArray, const bool Reversed = false);
 };
