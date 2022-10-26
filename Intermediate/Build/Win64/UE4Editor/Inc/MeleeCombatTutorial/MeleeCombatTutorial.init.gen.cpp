@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeMeleeCombatTutorial_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x82373925,
-				0x2E99A79E,
+				0x679AEAFE,
+				0xED06046A,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);
