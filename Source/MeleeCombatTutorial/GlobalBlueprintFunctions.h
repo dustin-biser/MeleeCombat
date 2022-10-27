@@ -13,10 +13,15 @@ UCLASS()
 class MELEECOMBATTUTORIAL_API UGlobalBlueprintFunctions : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
+
+	/** Converts frame count to a duration in seconds given the target frames per second of the game. */
+	UFUNCTION(BlueprintPure, Category = "Utilities")
+	static float FrameCountToSeconds(int32 NumFrames);
 	
 	UFUNCTION(BlueprintCallable, Category = "Miscellaneous")
 	static void SetCameraIsMovableWhenPaused(const UObject* WorldContextObject, bool bIsMovable);
 
 	UFUNCTION(BlueprintPure, Category = "Utilities|Array", Meta = (DisplayName = "Sort (Integer Array) (Copy)"))
 	static TArray<int32> SortIntegerArray(const TArray<int32>& IntegerArray, const bool Reversed = false);
+
 };
