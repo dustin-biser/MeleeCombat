@@ -11,7 +11,7 @@ class UNiagaraSystem;
 class UFMODEvent;
 
 USTRUCT(BlueprintType)
-struct FEffectSpawnData  
+struct FAbilityEffectSpawnData  
 {
 	GENERATED_USTRUCT_BODY();
 
@@ -37,21 +37,19 @@ class MELEECOMBATTUTORIAL_API UAbilityEffectsDataAsset : public UPrimaryDataAsse
 
 public:
 
-	/** Hit effect particles spawned on ability/attack hit events. */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Impact Hit Effects")
-	TArray<FEffectSpawnData> HitEffects;
+	/** Hit effect particles spawned on ability/attack damage events. */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Ability Hit Effects")
+	TArray<FAbilityEffectSpawnData> HitEffects;
 
-	/** Hit sound played during ability/attack hit events. */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Impact Hit Effects")
+	/** Hit sound played during ability/attack damage events. */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Ability Hit Effects")
 	UFMODEvent* HitEffectSound;
 
-	/** Burst effect particles spawned durinmg burst damage events. */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Burst Damage Effects")
-	TArray<FEffectSpawnData> BurstDamageEffects;
+	/** Effects to attach to damaged Actor during intial burst damage tick. */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Burst Damage Only")
+	TArray<FAbilityEffectSpawnData> AttachedBurstEffects;
 
-	/** Burst sound played during ability/attack burst damage events. */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Burst Damage Effects")
-	UFMODEvent* BurstDamageSound;
-
-	
+	/** Effects to spawn when ability intersects level geometry (rather than damaging an Actor). */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "On Overlap Level Geometry")
+	TArray<FAbilityEffectSpawnData> EffectsOnLevelOverlap;
 };

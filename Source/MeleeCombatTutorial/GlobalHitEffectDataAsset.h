@@ -15,9 +15,15 @@ class MELEECOMBATTUTORIAL_API UGlobalHitEffectDataAsset : public UPrimaryDataAss
 	GENERATED_BODY()
 	
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "On Actor Death")
 	int32 NumScreenShakeFramesOnActorDeath;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "On Actor Death")
 	int32 NumHitPauseFramesOnActorDeath;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "On Player Damaged")
+	int32 NumScreenShakeFramesOnPlayerDamaged;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "On Player Damaged")
+	int32 NumHitPauseFramesOnPlayerDamaged;
 };
