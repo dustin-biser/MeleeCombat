@@ -25,3 +25,11 @@ static TAutoConsoleVariable<bool> CVarDebugAimAssist(
 	TEXT("Toggle debug mode for player Aim Assist.\n"),
 	ECVF_Scalability | ECVF_RenderThreadSafe);
 
+/* Time Dialation value for Toggle Debug Slow Mode. */
+static TAutoConsoleVariable<float> CVarDebugSlowModePercent(
+	TEXT("dev.DebugSlowModePercent"),
+	0.15f,
+	TEXT("Time dialation value for Debug Slow Mode.\n"),
+	ECVF_Scalability | ECVF_RenderThreadSafe);
+
+
