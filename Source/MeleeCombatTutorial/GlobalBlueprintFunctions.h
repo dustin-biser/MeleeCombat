@@ -24,4 +24,8 @@ class MELEECOMBATTUTORIAL_API UGlobalBlueprintFunctions : public UBlueprintFunct
 	UFUNCTION(BlueprintPure, Category = "Utilities|Array", Meta = (DisplayName = "Sort (Integer Array) (Copy)"))
 	static TArray<int32> SortIntegerArray(const TArray<int32>& IntegerArray, const bool Reversed = false);
 
+	/** Retrieves all Meta Data Instances from the given Animation Sequence */
+	UFUNCTION(BlueprintPure, Category = "Animation")
+	static void GetMetaData(const UAnimSequenceBase* AnimationSequence, const UAnimInstance* AnimInstance, TArray<UAnimMetaData*>& MetaData);
+
 };

@@ -2,7 +2,15 @@
 
 
 #include "GlobalBlueprintFunctions.h"
+
+#include "Animation/AnimInstance.h"
+#include "Animation/AnimMetaData.h"
+#include "Animation/AnimMontage.h"
+#include "Animation/AnimSequenceBase.h"
+
 #include "Engine.h"
+
+DEFINE_LOG_CATEGORY_STATIC(LogGlobalBlueprintLibrary, Verbose, All);
 
 float UGlobalBlueprintFunctions::FrameCountToSeconds(int32 NumFrames)
 {
@@ -38,4 +46,28 @@ TArray<int32> UGlobalBlueprintFunctions::SortIntegerArray(const TArray<int32>& I
 			});
 	}
 	return Array;
+}
+
+void UGlobalBlueprintFunctions::GetMetaData(const UAnimSequenceBase* AnimationSequence, const UAnimInstance* AnimInstance, TArray<UAnimMetaData*>& MetaData)
+{
+	MetaData.Empty();
+	if (AnimationSequence)
+	{
+		// Retrieve MetaData for Animation Sequence.
+		MetaData = AnimationSequence->GetMetaData();
+
+		if (MetaData.Num() == 0 && AnimInstance != nullptr)
+		{
+			// Check if have an AnimMontage instead
+			if (const UAnimMontage* AnimMontage = Cast<const UAnimMontage>(AnimationSequence))
+			{
+				FName MontageSectionName = AnimInstance->Montage_GetCurrentSection();
+				MetaData = AnimMontage->GetSectionMetaData(MontageSectionName);
+			}
+		}
+	}
+	else
+	{
+		UE_LOG(LogGlobalBlueprintLibrary, Warning, TEXT("Invalid Animation Sequence for GetMetaData"));
+	}
 }
