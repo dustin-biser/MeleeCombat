@@ -25,6 +25,13 @@ static TAutoConsoleVariable<bool> CVarDebugAimAssist(
 	TEXT("Toggle debug mode for player Aim Assist.\n"),
 	ECVF_Scalability | ECVF_RenderThreadSafe);
 
+/*  Debug Draw AI Player Avoidance Radius */
+static TAutoConsoleVariable<bool> CVarDebugAIPlayerAvoidanceRadius(
+	TEXT("dev.DebugAIPlayerAvoidanceRadius"),
+	false,
+	TEXT("Toggle debug mode to display the AI's avoidance range from the Player.\n"),
+	ECVF_Scalability | ECVF_RenderThreadSafe);
+
 /* Time Dialation value for Toggle Debug Slow Mode. */
 static TAutoConsoleVariable<float> CVarDebugSlowModePercent(
 	TEXT("dev.DebugSlowModePercent"),
