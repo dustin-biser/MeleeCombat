@@ -45,6 +45,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Ability Hit Effects")
 	UFMODEvent* HitEffectSound;
 
+	/** Sound played when ability/attack kills an Actor. */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Ability Hit Effects")
+	UFMODEvent* HitKillsActorSound;
+
 	/** Effects to attach to damaged Actor during intial burst damage tick. */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Burst Damage Only")
 	TArray<FAbilityEffectSpawnData> AttachedBurstEffects;
