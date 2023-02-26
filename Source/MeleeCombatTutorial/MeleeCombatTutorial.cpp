@@ -46,4 +46,11 @@ static TAutoConsoleVariable<float> CVarDebugSlowModePercent(
 	TEXT("Time dialation value for Debug Slow Mode.\n"),
 	ECVF_Scalability | ECVF_RenderThreadSafe);
 
+/*  Enable debug logging for Enemy Combat Director Attack Tokens */
+static TAutoConsoleVariable<bool> CVarDebugEnemyAttackTokens(
+	TEXT("dev.DebugEnemyAttackTokens"),
+	false,
+	TEXT("Toggle debug logging of Enemy Combat Director Attack Tokens.\n"),
+	ECVF_Scalability | ECVF_RenderThreadSafe);
+
 
