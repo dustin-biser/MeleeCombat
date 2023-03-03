@@ -54,3 +54,11 @@ static TAutoConsoleVariable<bool> CVarDebugEnemyAttackTokens(
 	ECVF_Scalability | ECVF_RenderThreadSafe);
 
 
+/*  Enable debug visualizer for when player has invincibility frames active */
+static TAutoConsoleVariable<bool> CVarDebugPlayerIFrames(
+	TEXT("dev.DebugPlayerIFrames"),
+	false,
+	TEXT("Toggle debug visualizer for player invincibility frames.\n"),
+	ECVF_Scalability | ECVF_RenderThreadSafe);
+
+
