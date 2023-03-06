@@ -61,4 +61,11 @@ static TAutoConsoleVariable<bool> CVarDebugPlayerIFrames(
 	TEXT("Toggle debug visualizer for player invincibility frames.\n"),
 	ECVF_Scalability | ECVF_RenderThreadSafe);
 
+/*  Enable debug visualizer for input range for Hookshot Heavy Sword Attack */
+static TAutoConsoleVariable<bool> CVarDebugHookshotHeavyAttackInputRange(
+	TEXT("dev.DebugHookshotHeavyAttackInputRange"),
+	false,
+	TEXT("Toggle debug visualizer for showing player input range for Hookshot Heavy Sword Attack.\n"),
+	ECVF_Scalability | ECVF_RenderThreadSafe);
+
 
